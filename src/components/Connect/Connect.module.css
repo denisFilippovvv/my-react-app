@@ -45,3 +45,13 @@
     line-height: 1.6;
     color: #666;
 }
+
+@media (max-width: 768px) {
+    .connect {
+        padding: 40px 20px;
+    }
+    
+    .connect_text h3 {
+        font-size: 36px;
+    }
+}

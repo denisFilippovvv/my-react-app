@@ -1,0 +1,49 @@
+.cardListContainer {
+    width: 100%;
+    margin: 40px auto 0;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1570px;
+    margin: 0 auto;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.swiperContainer {
+    width: 100%;
+    margin-top: 50px;
+    padding: 0 20px;
+}
+
+.slideImage {
+    width: 100%;
+    max-height: 550px;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.loading, .error {
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+}
+
+.error {
+    color: #ff0000;
+}
+
+@media (max-width: 768px) {
+    .columns {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature {
+        max-width: 100%;
+    }
+}

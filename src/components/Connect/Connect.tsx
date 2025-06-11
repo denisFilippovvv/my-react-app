@@ -6,14 +6,15 @@ const Connect = () => {
   return (
     <section className={styles.connect}>
       <div className={styles.container}>
-        <img 
-          src={img3} 
-          alt="Connect with Recruiter" 
-          className={styles.img3} 
-        />
-        <div>
+        <div className={styles.connect_image}>
+          <img 
+            src={img3} 
+            alt="Connect with Recruiter" 
+          />
+        </div>
+        <div className={styles.connect_text}>
           <h3>Connect With Recruiter</h3>
-          <p>Get instant access to a curated pool of top creative...</p>
+          <p>Get instant access to a curated pool of top creative & tech talent actively seeking their next role. Find highly qualified job!</p>
         </div>
       </div>
     </section>
