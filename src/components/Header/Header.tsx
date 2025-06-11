@@ -9,16 +9,16 @@ const Header = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
 
   return (
-    <header className={`${styles.page_header} ${styles.header}`}>
+    <header className={styles.page_header}>
       <nav>
         <Link to="/" className={styles.logo}>Jobly</Link>
         
         {isMobile ? (
           <button className={styles.menuToggle}>☰</button>
         ) : (
-          <nav className={styles.header_nav}>
+          <div className={styles.header_nav}>
             <ul><Link to="/cards" className={styles.navLink}>All Cards</Link></ul>
-            <ul>For Recruiters</ul>
+            <ul className={styles.navLink}>For Recruiters</ul>
             <ul><button className={styles.header_button1}>Sign Up</button></ul>
             <ul>
               <button 
@@ -28,7 +28,7 @@ const Header = () => {
                 Log In
               </button>
             </ul>
-          </nav>
+          </div>
         )}
       </nav>
       
