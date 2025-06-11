@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import Card from '../Card/Card';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
@@ -19,6 +19,7 @@ interface CardData {
 interface CardListProps {
     limit?: number;
     disableLinks?: boolean;
+    interactiveCards?: boolean;
 }
 
 const DEFAULT_CARDS: CardData[] = [
@@ -43,10 +44,14 @@ const DEFAULT_CARDS: CardData[] = [
 ];
 
 const CardList: React.FC<CardListProps> = ({ limit = 3, disableLinks = false }) => {
+    const [searchParams] = useSearchParams();
+    const cardParam = searchParams.get('card');
+    const initialIndex = cardParam ? Math.max(0, parseInt(cardParam, 10)) : 0;
+    
     const [cards, setCards] = useState<CardData[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
-    const [activeIndex, setActiveIndex] = useState(0);
+    const [activeIndex, setActiveIndex] = useState(initialIndex);
     const swiperRef = useRef<any>(null);
 
     useEffect(() => {
@@ -74,11 +79,14 @@ const CardList: React.FC<CardListProps> = ({ limit = 3, disableLinks = false }) 
         fetchData();
     }, [limit]);
 
+    useEffect(() => {
+        if (swiperRef.current && swiperRef.current.swiper) {
+            swiperRef.current.swiper.slideTo(activeIndex);
+        }
+    }, [activeIndex]);
+
     const handleCardClick = (index: number) => {
         setActiveIndex(index);
-        if (swiperRef.current && swiperRef.current.swiper) {
-            swiperRef.current.swiper.slideTo(index);
-        }
     };
 
     if (loading) return <div className={styles.loading}>Loading...</div>;
@@ -128,9 +136,10 @@ const CardList: React.FC<CardListProps> = ({ limit = 3, disableLinks = false }) 
                         </div>
                     ) : (
                         <Link 
-                            to="/cards" 
+                            to={`/cards?card=${index}`} 
                             key={card.id} 
                             className={styles.cardLink}
+                            onClick={() => handleCardClick(index)}
                         >
                             <Card
                                 id={card.id}
