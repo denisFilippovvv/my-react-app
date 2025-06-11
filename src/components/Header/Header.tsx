@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
+import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
 import Modal from './Modal';
 
@@ -10,12 +11,13 @@ const Header = () => {
   return (
     <header className={`${styles.page_header} ${styles.header}`}>
       <nav>
-        <ul className={styles.logo}>Jobly</ul>
+        <Link to="/" className={styles.logo}>Jobly</Link>
         
         {isMobile ? (
           <button className={styles.menuToggle}>☰</button>
         ) : (
           <nav className={styles.header_nav}>
+            <ul><Link to="/cards" className={styles.navLink}>All Cards</Link></ul>
             <ul>For Recruiters</ul>
             <ul><button className={styles.header_button1}>Sign Up</button></ul>
             <ul>
@@ -30,9 +32,7 @@ const Header = () => {
         )}
       </nav>
       
-      {isModalOpen && (
-        <Modal onClose={() => setIsModalOpen(false)} />
-      )}
+      {isModalOpen && <Modal onClose={() => setIsModalOpen(false)} />}
     </header>
   );
 };

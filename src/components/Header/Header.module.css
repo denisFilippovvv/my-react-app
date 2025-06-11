@@ -85,3 +85,15 @@
         padding: 0 20px;
     }
 }
+
+.navLink {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 16px 10px;
+  transition: color 0.3s;
+}
+
+.navLink:hover {
+  color: #3D1EDD;
+}

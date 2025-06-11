@@ -1,10 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import Card from '../Card/Card';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
 import styles from './CardList.module.css';
 
 import profilImg from '../../assets/images/professional-profil.png';
@@ -16,6 +14,11 @@ interface CardData {
     title: string;
     body: string;
     image: any;
+}
+
+interface CardListProps {
+    limit?: number;
+    disableLinks?: boolean;
 }
 
 const DEFAULT_CARDS: CardData[] = [
@@ -39,7 +42,7 @@ const DEFAULT_CARDS: CardData[] = [
     }
 ];
 
-const CardList: React.FC = () => {
+const CardList: React.FC<CardListProps> = ({ limit = 3, disableLinks = false }) => {
     const [cards, setCards] = useState<CardData[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
@@ -49,7 +52,7 @@ const CardList: React.FC = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=3');
+                const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${limit}`);
                 const data = await response.json();
                 
                 const mergedCards = data.map((item: any, index: number) => ({
@@ -69,7 +72,7 @@ const CardList: React.FC = () => {
         };
 
         fetchData();
-    }, []);
+    }, [limit]);
 
     const handleCardClick = (index: number) => {
         setActiveIndex(index);
@@ -109,15 +112,35 @@ const CardList: React.FC = () => {
 
             <div className={styles.columns}>
                 {cards.map((card, index) => (
-                    <Card
-                        key={card.id}
-                        id={card.id}
-                        title={card.title}
-                        body={card.body}
-                        image={card.image}
-                        active={index === activeIndex}
-                        onClick={() => handleCardClick(index)}
-                    />
+                    disableLinks ? (
+                        <div 
+                            key={card.id}
+                            onClick={() => handleCardClick(index)}
+                            className={styles.cardWrapper}
+                        >
+                            <Card
+                                id={card.id}
+                                title={card.title}
+                                body={card.body}
+                                image={card.image}
+                                active={index === activeIndex}
+                            />
+                        </div>
+                    ) : (
+                        <Link 
+                            to="/cards" 
+                            key={card.id} 
+                            className={styles.cardLink}
+                        >
+                            <Card
+                                id={card.id}
+                                title={card.title}
+                                body={card.body}
+                                image={card.image}
+                                active={index === activeIndex}
+                            />
+                        </Link>
+                    )
                 ))}
             </div>
         </div>

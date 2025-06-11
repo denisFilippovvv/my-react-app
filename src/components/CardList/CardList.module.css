@@ -47,3 +47,12 @@
         max-width: 100%;
     }
 }
+
+.cardWrapper {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cardLink {
+    text-decoration: none;
+}

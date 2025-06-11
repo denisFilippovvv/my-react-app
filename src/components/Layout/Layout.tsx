@@ -1,15 +1,16 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import styles from './Layout.module.css';
 import Preloader from '../Preloader/Preloader';
 
-type LayoutProps = {
-  children: React.ReactNode;
+interface LayoutProps {
+  children?: React.ReactNode;
   isLoading?: boolean;
-};
+}
 
-const Layout = ({ children, isLoading = false }: LayoutProps) => {
+const Layout: React.FC<LayoutProps> = ({ isLoading = false }) => {
   return (
     <div className={styles.page}>
       {isLoading && <Preloader />}
@@ -17,7 +18,7 @@ const Layout = ({ children, isLoading = false }: LayoutProps) => {
       <Header />
       
       <main className={styles.main}>
-        {children}
+        <Outlet />
       </main>
       
       <Footer />

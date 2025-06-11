@@ -12,6 +12,8 @@
     cursor: pointer;
     transition: all 0.3s ease;
     margin-top: 50px;
+    text-decoration: none; 
+    color: inherit; 
 }
 
 .feature:hover {
@@ -47,3 +49,4 @@
     color: #666;
     font-weight: 100;
 }
+
