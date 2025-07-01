@@ -14,7 +14,7 @@ interface CardData {
     title: string;
     body: string;
     image: any;
-}
+}3
 
 interface CardListProps {
     limit?: number;
@@ -47,7 +47,7 @@ const CardList: React.FC<CardListProps> = ({ limit = 3, disableLinks = false }) 
     const [searchParams] = useSearchParams();
     const cardParam = searchParams.get('card');
     const initialIndex = cardParam ? Math.max(0, parseInt(cardParam, 10)) : 0;
-    
+
     const [cards, setCards] = useState<CardData[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
@@ -59,17 +59,18 @@ const CardList: React.FC<CardListProps> = ({ limit = 3, disableLinks = false }) 
             try {
                 const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${limit}`);
                 const data = await response.json();
-                
+
                 const mergedCards = data.map((item: any, index: number) => ({
                     id: item.id,
                     title: item.title,
                     body: item.body,
-                    image: DEFAULT_CARDS[index]?.image || profilImg 
+                    image: DEFAULT_CARDS[index]?.image || profilImg
                 }));
-                
+
                 setCards(mergedCards.length ? mergedCards : DEFAULT_CARDS);
                 setLoading(false);
             } catch (err) {
+                console.error("Не удалось связаться с сервером. Используются стандартные значения.");
                 setError(err instanceof Error ? err.message : 'Unknown error');
                 setLoading(false);
                 setCards(DEFAULT_CARDS);
@@ -121,7 +122,7 @@ const CardList: React.FC<CardListProps> = ({ limit = 3, disableLinks = false }) 
             <div className={styles.columns}>
                 {cards.map((card, index) => (
                     disableLinks ? (
-                        <div 
+                        <div
                             key={card.id}
                             onClick={() => handleCardClick(index)}
                             className={styles.cardWrapper}
@@ -135,9 +136,9 @@ const CardList: React.FC<CardListProps> = ({ limit = 3, disableLinks = false }) 
                             />
                         </div>
                     ) : (
-                        <Link 
-                            to={`/cards?card=${index}`} 
-                            key={card.id} 
+                        <Link
+                            to={`/cards?card=${index}`}
+                            key={card.id}
                             className={styles.cardLink}
                             onClick={() => handleCardClick(index)}
                         >

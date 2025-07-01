@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Connect.module.css';
 import img3 from '../../assets/images/img3.png';
 

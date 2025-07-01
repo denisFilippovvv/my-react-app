@@ -10,7 +10,7 @@ interface CardProps {
   onClick?: () => void;
 }
 
-const Card: React.FC<CardProps> = ({ id, title, body, image, active = false, onClick }) => {
+const Card: React.FC<CardProps> = ({ id, title, body, active = false, onClick }) => {
   return (
     <div 
       className={`${styles.feature} ${active ? styles.active : ''}`}

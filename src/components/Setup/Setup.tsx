@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Setup.module.css';
 import img4 from '../../assets/images/img4.png';
 

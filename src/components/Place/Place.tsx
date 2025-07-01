@@ -1,6 +1,4 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+
 import styles from './Place.module.css';
 import decoration from '../../assets/images/dop.png';
 import avatar from '../../assets/images/avatar.png';

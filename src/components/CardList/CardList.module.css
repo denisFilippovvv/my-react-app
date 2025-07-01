@@ -37,22 +37,56 @@
     color: #ff0000;
 }
 
-@media (max-width: 768px) {
-    .columns {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .feature {
-        max-width: 100%;
-    }
-}
-
 .cardWrapper {
     cursor: pointer;
     text-decoration: none;
+    width: 100%;
 }
 
 .cardLink {
     text-decoration: none;
+    width: 100%;
+}
+
+/* Адаптив для 768px */
+@media (max-width: 768px) {
+    .columns {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .swiperContainer {
+        margin-top: 30px;
+    }
+    
+    .slideImage {
+        max-height: 400px;
+    }
+}
+
+/* Адаптив для 360px */
+@media (max-width: 360px) {
+    .cardListContainer {
+        margin-top: 20px;
+    }
+    
+    .columns {
+        padding: 0 10px;
+        gap: 10px;
+    }
+    
+    .swiperContainer {
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+    
+    .slideImage {
+        max-height: 250px;
+    }
+    
+    .loading, .error {
+        padding: 20px;
+        font-size: 16px;
+    }
 }

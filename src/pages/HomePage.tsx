@@ -2,10 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Candidates from '../components/Candidates/Candidates';
 import CardList from '../components/CardList/CardList';
-import Place from '../components/Place/Place';
 import Connect from '../components/Connect/Connect';
 import Setup from '../components/Setup/Setup';
-import Message from '../components/Message';
 import styles from './HomePage.module.css';
 
 const HomePage: React.FC = () => {

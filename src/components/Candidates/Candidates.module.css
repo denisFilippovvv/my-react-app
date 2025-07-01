@@ -70,3 +70,67 @@
     justify-content: center;
     padding-bottom: 100px;
 }
+
+/* Адаптив для 768px */
+@media (max-width: 768px) {
+    .Candidates_content h1 {
+        font-size: 30px;
+        margin-bottom: 0px;
+    }
+
+    .Candidates_content h1:last-of-type {
+        margin-bottom: 0px;
+    }
+
+    .Candidates_content p {
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    .can {
+        margin: 30px 0 -25px 0;
+        padding: 12px 28px;
+        font-size: 15px;
+    }
+
+    .img1 {
+        padding-bottom: 70px;
+    }
+}
+
+/* Адаптив для 360px */
+@media (max-width: 360px) {
+    .Candidates {
+        margin: 20px 0;
+    }
+
+    .Candidates_content h1 {
+        font-size: 28px;
+        margin-bottom: -10px;
+    }
+
+    .Candidates_content h1:last-of-type {
+        margin-bottom: 10px;
+    }
+
+    .Candidates_content p {
+        font-size: 16px;
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+
+    .Candidates_content p:last-child {
+        font-size: 14px;
+        margin: 20px 0 30px 0;
+    }
+
+    .can {
+        margin: 25px 0 -20px 0;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .img1 {
+        padding-bottom: 50px;
+    }
+}

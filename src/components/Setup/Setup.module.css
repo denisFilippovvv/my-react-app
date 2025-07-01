@@ -54,3 +54,63 @@
   object-fit: cover;
   object-position: right;
 }
+
+/* Адаптив для 768px */
+@media (max-width: 768px) {
+  .setup {
+    height: 60vh;
+  }
+  
+  .text_container h2 {
+    font-size: 3rem;
+    line-height: 1.3;
+    max-width: 600px;
+  }
+  
+  .text_container .primary_button {
+    font-size: 18px;
+    width: 180px;
+    padding: 12px 4px;
+  }
+}
+
+/* Адаптив для 360px */
+@media (max-width: 360px) {
+  .setup {
+    flex-direction: column;
+    height: auto;
+    min-height: 80vh;
+  }
+  
+  .text_container {
+    order: 2;
+    text-align: center;
+    align-items: center;
+    padding: 30px 20px;
+  }
+  
+  .text_container h2 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    max-width: 100%;
+  }
+  
+  .text_container .primary_button {
+    font-size: 16px;
+    width: 160px;
+    padding: 10px 4px;
+    margin-top: 0;
+  }
+  
+  .image_container {
+    order: 1;
+    flex: none;
+    height: 40vh;
+    width: 100%;
+  }
+  
+  .image_container img {
+    object-position: center;
+  }
+}
