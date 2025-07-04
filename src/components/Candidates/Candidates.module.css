@@ -40,13 +40,13 @@
     font-size: 16px;
     cursor: pointer;
     border-radius: 4px;
-    display: inline-block; /* Добавлено */
-    text-align: center; /* Добавлено */
-    text-decoration: none; /* Добавлено */
+    display: inline-block; 
+    text-align: center; 
+    text-decoration: none; 
 }
 
 .can:hover {
-    background-color: #434190; /* Добавлено */
+    background-color: #434190; 
 }
 
 .minitext {
@@ -78,7 +78,6 @@
     padding-bottom: 100px;
 }
 
-/* Адаптив для 768px */
 @media (max-width: 768px) {
     .Candidates_content h1 {
         font-size: 30px;
@@ -105,7 +104,6 @@
     }
 }
 
-/* Адаптив для 360px */
 @media (max-width: 360px) {
     .Candidates {
         margin: 20px 0;

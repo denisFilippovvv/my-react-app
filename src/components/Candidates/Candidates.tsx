@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'; // Добавлен импорт Link
+import { Link } from 'react-router-dom'; 
 import styles from './Candidates.module.css';
 import img1 from '../../assets/images/img1.png';
 

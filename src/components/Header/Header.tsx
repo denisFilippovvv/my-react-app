@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
@@ -39,7 +39,6 @@ const Header = () => {
         ) : (
           <div className={styles.header_nav}>
             <ul><Link to="/cards" className={styles.navLink}>All Cards</Link></ul>
-            {/* Изменение здесь */}
             <ul>
               <Link to="/for-recruiters" className={styles.navLink}>
                 For Recruiters
@@ -85,7 +84,6 @@ const Header = () => {
             All Cards
           </Link>
           
-          {/* Изменение здесь */}
           <Link 
             to="/for-recruiters" 
             className={styles.mobileMenuLink}

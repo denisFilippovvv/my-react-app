@@ -13,8 +13,7 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ isLoading = false }) => {
   return (
     <div className={styles.page}>
-      {isLoading && <Preloader />}
-      
+      <Preloader isLoading={isLoading} />
       <Header />
       
       <main className={styles.main}>

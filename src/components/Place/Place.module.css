@@ -103,7 +103,6 @@
     background-color: #434190;
 }
 
-/* Адаптив для 1440px */
 @media (max-width: 1440px) {
     .quote {
         font-size: 38px;
@@ -121,7 +120,6 @@
     }
 }
 
-/* Адаптив для 768px */
 @media (max-width: 768px) {
     .place {
         padding: 40px 15px;
@@ -159,7 +157,6 @@
     }
 }
 
-/* Адаптив для 360px */
 @media (max-width: 360px) {
     .place {
         padding: 20px 10px;

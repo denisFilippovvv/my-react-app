@@ -6,19 +6,29 @@ interface PreloaderProps {
 }
 
 const Preloader: React.FC<PreloaderProps> = ({ isLoading }) => {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
-    if (!isLoading) {
+    let timer: number | null = null;
+    
+    if (isLoading) {
+      setIsVisible(true);
+      setIsAnimating(false);
+    } else if (isVisible) {
       setIsAnimating(true);
       
-      const timer = setTimeout(() => {
+      timer = window.setTimeout(() => {
         setIsVisible(false);
-      }, 500); 
-      return () => clearTimeout(timer);
+      }, 500);
     }
-  }, [isLoading]);
+
+    return () => {
+      if (timer !== null) {
+        clearTimeout(timer);
+      }
+    };
+  }, [isLoading, isVisible]);
 
   if (!isVisible) return null;
 

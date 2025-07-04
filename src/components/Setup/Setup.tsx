@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'; // Добавим импорт Link
+import { Link } from 'react-router-dom';
 import styles from './Setup.module.css';
 import img4 from '../../assets/images/img4.png';
 
