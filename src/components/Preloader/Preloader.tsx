@@ -1,22 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Preloader.module.css';
 
-const Preloader = () => {
-  const [isLoading, setIsLoading] = useState(true);
+interface PreloaderProps {
+  isLoading: boolean;
+}
+
+const Preloader: React.FC<PreloaderProps> = ({ isLoading }) => {
+  const [isVisible, setIsVisible] = useState(true);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000); // 2 секунды загрузки
+    if (!isLoading) {
+      setIsAnimating(true);
+      
+      const timer = setTimeout(() => {
+        setIsVisible(false);
+      }, 500); 
+      return () => clearTimeout(timer);
+    }
+  }, [isLoading]);
 
-    return () => clearTimeout(timer);
-  }, []);
+  if (!isVisible) return null;
 
-  return isLoading ? (
-    <div className={styles.preloader}>
+  return (
+    <div className={`${styles.preloader} ${isAnimating ? styles.hidden : ''}`}>
       <div className={styles.loader}></div>
     </div>
-  ) : null;
+  );
 };
 
 export default Preloader;

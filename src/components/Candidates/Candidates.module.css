@@ -40,6 +40,13 @@
     font-size: 16px;
     cursor: pointer;
     border-radius: 4px;
+    display: inline-block; /* Добавлено */
+    text-align: center; /* Добавлено */
+    text-decoration: none; /* Добавлено */
+}
+
+.can:hover {
+    background-color: #434190; /* Добавлено */
 }
 
 .minitext {

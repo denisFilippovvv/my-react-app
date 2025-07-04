@@ -73,61 +73,6 @@
     color: #222;
 }
 
-.swiper_container {
-    width: 100%;
-    margin-top: 50px;
-    position: relative;
-}
-
-.gradient {
-    /* Дополнительные стили градиента если нужно */
-}
-
-/* Стили для кнопок Swiper */
-.swiper-button-prev,
-.swiper-button-next {
-    width: 40px;
-    height: 40px;
-    background-color: #4C11E7;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
-    background-color: #3e12ad;
-    transform: scale(1.1);
-}
-
-.swiper-button-prev::after,
-.swiper-button-next::after {
-    content: '';
-}
-
-.swiper-button-prev::before,
-.swiper-button-next::before {
-    content: '';
-    display: block;
-    width: 10px;
-    height: 10px;
-    border: solid #fff;
-    border-width: 2px 2px 0 0;
-}
-
-.swiper-button-prev::before {
-    transform: rotate(-135deg);
-}
-
-.swiper-button-next::before {
-    transform: rotate(45deg);
-}
-
-/* Аватар */
 .avatar {
     height: 68px;
     width: 68px;
@@ -137,55 +82,114 @@
     display: block;
 }
 
-/* Колонки (если используются) */
-.columns {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1570px;
-    margin: 40px auto 0;
-    gap: 20px;
-    padding: 0 20px;
-}
-
-.feature {
-    flex: 1;
-    min-width: 250px;
-    max-width: 480px;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    position: relative;
-    overflow: hidden;
-}
-
-.feature::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+.allCardsButton {
+    margin-top: 20px;
     width: 100%;
-    height: 4px;
-    background-color: transparent;
-    transition: background-color 0.3s ease;
+    text-align: center;
 }
 
-.feature.active::before {
-    background-color: #4C11E7;
-}
-
-.feature h3 {
-    font-size: 28px;
+.buttonLink {
+    display: inline-block;
+    padding: 16px 32px;
+    background-color: #3D1EDD;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
     font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
+    transition: background-color 0.3s;
 }
 
-.feature p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #666;
-    font-weight: 100;
+.buttonLink:hover {
+    background-color: #434190;
+}
+
+/* Адаптив для 1440px */
+@media (max-width: 1440px) {
+    .quote {
+        font-size: 38px;
+        max-width: 1200px;
+    }
+    
+    .place h2 {
+        font-size: 36px;
+        margin-top: 60px;
+    }
+    
+    .quote_container {
+        left: 8%;
+        top: 80px;
+    }
+}
+
+/* Адаптив для 768px */
+@media (max-width: 768px) {
+    .place {
+        padding: 40px 15px;
+        margin-top: -90px;
+    }
+    
+    .quote_container {
+        position: static;
+        margin: 0 auto 20px;
+        text-align: center;
+    }
+    
+    .quote {
+        font-size: 28px;
+        line-height: 1.4;
+    }
+    
+    .place h2 {
+        font-size: 28px;
+        margin-top: 40px;
+    }
+    
+    .avatar {
+        height: 60px;
+        width: 60px;
+    }
+
+    .buttonLink {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+
+    .decoration {
+        display: none;
+    }
+}
+
+/* Адаптив для 360px */
+@media (max-width: 360px) {
+    .place {
+        padding: 20px 10px;
+    }
+    
+    .quote {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+    
+    .place h2 {
+        font-size: 22px;
+        margin-top: 30px;
+    }
+    
+    .avatar {
+        height: 50px;
+        width: 50px;
+    }
+    
+    .name {
+        font-size: 16px;
+    }
+    
+    .position {
+        font-size: 14px;
+    }
+    
+    .buttonLink {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
 }

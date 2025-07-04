@@ -76,14 +76,16 @@
         width: 100%;
     }
 
-    .footer_left_text1 {
+    .footer_left_text1, .footer_left_text2 {
         margin: 20px auto 30px;
         max-width: 100%;
+        font-size: 16px;
     }
 
     .footer_links {
-        margin-top: 40px;
+        margin-top: 0px;
         margin-bottom: 20px;
+        font-size: 14px;
     }
 }
 

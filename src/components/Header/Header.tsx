@@ -9,7 +9,6 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 768 });
 
-  // Блокировка прокрутки при открытом меню
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -40,7 +39,12 @@ const Header = () => {
         ) : (
           <div className={styles.header_nav}>
             <ul><Link to="/cards" className={styles.navLink}>All Cards</Link></ul>
-            <ul className={styles.navLink}>For Recruiters</ul>
+            {/* Изменение здесь */}
+            <ul>
+              <Link to="/for-recruiters" className={styles.navLink}>
+                For Recruiters
+              </Link>
+            </ul>
             <ul><button className={styles.header_button1}>Sign Up</button></ul>
             <ul>
               <button 
@@ -56,7 +60,6 @@ const Header = () => {
       
       {isModalOpen && <Modal onClose={() => setIsModalOpen(false)} />}
       
-      {/* Мобильное меню */}
       <div 
         className={`${styles.menuBackdrop} ${isMobileMenuOpen ? styles.visible : ''}`} 
         onClick={() => setIsMobileMenuOpen(false)}
@@ -82,13 +85,14 @@ const Header = () => {
             All Cards
           </Link>
           
-          <a 
-            href="#" 
+          {/* Изменение здесь */}
+          <Link 
+            to="/for-recruiters" 
             className={styles.mobileMenuLink}
             onClick={() => setIsMobileMenuOpen(false)}
           >
             For Recruiters
-          </a>
+          </Link>
           
           <button 
             className={`${styles.mobileMenuButton} ${styles.mobileMenuButton1}`}
