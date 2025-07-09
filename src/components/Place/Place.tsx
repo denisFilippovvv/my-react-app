@@ -21,11 +21,11 @@ const Place: React.FC<PlaceProps> = ({ isHome = true, limit }) => {
         <img src={avatar} alt="Zhao Cui" className={styles.avatar} />
         <div className={styles.quote_content}>
           <p className={styles.quote}>
-            Creating an Online Presence is Hard. Jobly Makes it Easy for Recruiters to See you
+            Создай онлайн-присутствие. HackFlow делает тебя видимым для рекрутеров и партнёров
           </p>
-          <p className={styles.name}>Zhao Cui</p>
-          <p className={styles.position}>Founder at Jobly.co</p>
-          <h2 id="section-title">Everything you want to know in one place.</h2>
+          <p className={styles.name}>Алексей Петров</p>
+          <p className={styles.position}>Основатель HackFlow</p>
+          <h2 id="section-title">Всё, что нужно знать, в одном месте.</h2>
         </div>
 
         <CardList
@@ -36,7 +36,7 @@ const Place: React.FC<PlaceProps> = ({ isHome = true, limit }) => {
         {isHome && (
           <div className={styles.allCardsButton}>
             <Link to="/cards" className={styles.buttonLink}>
-              View All Cards
+              Все карточки
             </Link>
           </div>
         )}

@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,18 +12,25 @@
 }
 
 .modal {
-    background-color: white;
-    padding: 20px;
+    background-color: #0a192f; /* Тёмный фон */
+    padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    width: 300px;
+    border: 1px solid #233554; /* Граница */
+    box-shadow: 0 0 30px rgba(100, 255, 218, 0.2); /* Свечение */
+    width: 320px;
     text-align: center;
+}
+
+.modal h2 {
+    color: #64ffda; /* Акцентный цвет */
+    margin-bottom: 20px;
+    font-size: 24px;
 }
 
 .modalForm {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
 .formGroup {
@@ -33,35 +40,62 @@
 }
 
 .formGroup label {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     font-weight: bold;
+    color: #8892b0; /* Серо-голубой текст */
+    font-size: 14px;
 }
 
 .formGroup input {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
+    padding: 12px;
+    background-color: #112240; /* Тёмный фон поля */
+    border: 1px solid #233554; /* Граница */
     border-radius: 4px;
+    color: #e6f1ff; /* Светлый текст */
+    font-size: 16px;
+}
+
+.formGroup input:focus {
+    outline: none;
+    border-color: #64ffda; /* Акцентный цвет при фокусе */
+    box-shadow: 0 0 5px rgba(100, 255, 218, 0.3);
 }
 
 .formButtons {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
+    gap: 15px;
+    margin-top: 10px;
 }
 
 .cancelButton, .submitButton {
-    padding: 10px 20px;
+    padding: 12px 25px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s;
 }
 
 .cancelButton {
-    background-color: #ccc;
+    background-color: transparent;
+    color: #e6f1ff; /* Светлый текст */
+    border: 1px solid #64ffda; /* Бирюзовая обводка */
+}
+
+.cancelButton:hover {
+    background-color: rgba(100, 255, 218, 0.1);
 }
 
 .submitButton {
-    background-color: #007bff;
-    color: white;
+    background: linear-gradient(145deg, #0aecd5, #0a7ef5); /* Градиент */
+    color: #0a192f; /* Тёмный текст */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.submitButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(10, 236, 213, 0.3);
 }

@@ -14,8 +14,8 @@ const CardsPage: React.FC = () => {
   return (
     <div className={styles.cardsPageContainer}>
       <div className={styles.pageHeader}>
-        <h1>All Job Cards</h1>
-        <Link to="/" className={styles.backLink}>← Back to Home</Link>
+        <h1>Все карточки</h1>
+        <Link to="/" className={styles.backLink}>← Вернуться на главную</Link>
       </div>
       
       <Place isHome={false} limit={limit} /> 

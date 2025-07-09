@@ -1,7 +1,8 @@
 .cardsPageContainer {
   padding: 40px 20px;
-  max-width: 1200px;
   margin: 0 auto;
+  background-color: #0a192f; /* Тёмный фон */
+  min-height: 100vh;
 }
 
 .pageHeader {
@@ -9,18 +10,63 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
+  padding: 0 20px;
+}
+
+.pageHeader h1 {
+  font-size: 36px;
+  color: #64ffda; /* Акцентный цвет */
+  margin: 0;
 }
 
 .backLink {
   padding: 12px 24px;
-  background-color: #f5f5f5;
+  background: linear-gradient(145deg, #0aecd5, #0a7ef5); /* Градиент */
+  color: #0a192f; /* Тёмный текст */
   border-radius: 4px;
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
+  font-weight: bold;
   transition: all 0.3s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .backLink:hover {
-  background-color: #e0e0e0;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(10, 236, 213, 0.3);
+}
+
+@media (max-width: 768px) {
+  .pageHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .pageHeader h1 {
+    font-size: 28px;
+  }
+  
+  .backLink {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .cardsPageContainer {
+    padding: 20px 10px;
+  }
+  
+  .pageHeader {
+    margin-bottom: 30px;
+  }
+  
+  .pageHeader h1 {
+    font-size: 24px;
+  }
+  
+  .backLink {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+  }
 }

@@ -2,16 +2,22 @@
     display: flex;
     justify-content: center;
     margin: 40px 0;
+    background-color: #0a192f; /* Тёмный фон */
+    padding: 50px 20px;
+    margin-top: 0;
+    margin-bottom: -90px;
 }
 
 .Candidates_content {
     text-align: center;
     width: 100%;
+    max-width: 1200px;
 }
 
 .Candidates_content h1 {
     font-size: 60px;
     margin-bottom: -22px;
+    color: #e6f1ff; /* Светлый текст */
 }
 
 .Candidates_content h1:last-of-type {
@@ -21,32 +27,37 @@
 .Candidates_content p {
     font-size: 23px;
     margin: 40px 0 0 0;
-    color: #707070;
+    color: #8892b0; /* Серо-голубой текст */
 }
 
 .Candidates_content p:last-child {
     font-size: 17px;
     margin: 30px 0 40px 0;
+    color: #8892b0;
 }
 
 .can {
-    border: 1px solid rgba(200, 198, 221, 0.75);
+    border: none;
     justify-content: center;
     margin: 40px 0 -33px 0;
     align-items: center;
     padding: 15px 33px;
-    background-color: rgba(61, 30, 221, 0.9);
-    color: white;
+    background: linear-gradient(145deg, #0aecd5, #0a7ef5); /* Градиент */
+    color: #0a192f;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
     border-radius: 4px;
-    display: inline-block; 
-    text-align: center; 
-    text-decoration: none; 
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .can:hover {
-    background-color: #434190; 
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(10, 236, 213, 0.3);
 }
 
 .minitext {
@@ -56,6 +67,7 @@
 .gradient {
     position: relative;
     width: 100%;
+    margin-top: 50px;
 }
 
 .gradient::before {
@@ -65,17 +77,17 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, black 50%, white 50%);
-    z-index: -2;
+    background: linear-gradient(to top, #0a192f 20%, transparent 100%);
+    z-index: 1;
 }
 
 .img1 {
-    width: 1500px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 1500px;
     display: block;
     margin: 0 auto;
-    justify-content: center;
-    padding-bottom: 100px;
+    position: relative;
+    z-index: 0;
 }
 
 @media (max-width: 768px) {
@@ -98,15 +110,12 @@
         padding: 12px 28px;
         font-size: 15px;
     }
-
-    .img1 {
-        padding-bottom: 70px;
-    }
 }
 
 @media (max-width: 360px) {
     .Candidates {
-        margin: 20px 0;
+        /* margin: 20px 0; */
+        padding: 30px 15px;
     }
 
     .Candidates_content h1 {
@@ -135,7 +144,7 @@
         font-size: 14px;
     }
 
-    .img1 {
-        padding-bottom: 50px;
+    .gradient::before {
+        background: linear-gradient(to top, #0a192f 40%, transparent 100%);
     }
 }

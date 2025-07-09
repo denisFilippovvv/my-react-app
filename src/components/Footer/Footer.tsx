@@ -10,15 +10,15 @@ const Footer = () => {
             <img src={logo} alt="Jobly Logo" />
           </div>
           <div className={styles.footer_left_text1}>
-            <p>We support a pool of diverse young creatives and engineers.</p>
+            <p>Мы объединяем разработчиков, дизайнеров, студентов и стартаперов, чтобы решать вызовы будущего вместе.</p>
           </div>
           <div className={styles.footer_left_text2}>
-            <p>© 2023 Jobly.co Copyright and All rights reserved.</p>
+            <p>© 2025 HackFlow. Все права защищены.</p>
           </div>
         </div>
         <div className={styles.footer_right}>
           <div className={styles.footer_links}>
-            <a href="#">Terms and Conditions</a> · <a href="#">Privacy Policy</a>
+            <a href="#">Условия участия</a> · <a href="#">Политика конфиденциальности</a>
           </div>
         </div>
       </div>

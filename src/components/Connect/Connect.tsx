@@ -12,8 +12,8 @@ const Connect = () => {
           />
         </div>
         <div className={styles.connect_text}>
-          <h3>Connect With Recruiter</h3>
-          <p>Get instant access to a curated pool of top creative & tech talent actively seeking their next role. Find highly qualified job!</p>
+          <h3>Найди партнёров для проекта</h3>
+          <p>Собери команду мечты — разработчиков, дизайнеров, аналитиков. Делитесь идеями, создавайте MVP, побеждайте в хакатонах и прокладывайте путь к успеху в цифровом мире.</p>
         </div>
       </div>
     </section>

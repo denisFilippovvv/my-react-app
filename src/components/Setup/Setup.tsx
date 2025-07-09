@@ -6,12 +6,12 @@ const Setup = () => {
   return (
     <section className={styles.setup}>
       <div className={styles.text_container}>
-        <h2>Set up your profile.<br />Let jobs find you.</h2>
+        <h2>Участвуй в хакатонах.<br />Получай <span>предложения.</span></h2>
         <Link 
           to="/join-now" 
           className={styles.primary_button}
         >
-          Join Now
+          Присоединиться
         </Link>
       </div>
       <div className={styles.image_container}>

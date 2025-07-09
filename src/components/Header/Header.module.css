@@ -1,7 +1,7 @@
 .page_header {
-    background-color: #fff;
+    background-color: #0a192f; /* Тёмный фон */
     padding: 20px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #233554; /* Граница */
 }
 
 .page_header nav {
@@ -15,8 +15,13 @@
     font-weight: bold;
     padding: 0 110px;
     margin: 0;
-    color: #333;
-    text-decoration: none
+    color: #64ffda; /* Акцентный цвет */
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.logo:hover {
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.5); /* Свечение */
 }
 
 .header_nav {
@@ -33,39 +38,48 @@
     align-items: center;
 }
 
-.header_nav ul:first-child {
+.navLink {
+    color: #e6f1ff; /* Светлый текст */
+    text-decoration: none;
     font-weight: bold;
-    color: #333;
+    padding: 16px 10px;
+    transition: color 0.3s;
+}
+
+.navLink:hover {
+    color: #64ffda; /* Акцентный цвет */
 }
 
 .header_button1 {
-    color: #fff;
-    background-color: #3D1EDD;
+    color: #0a192f; /* Тёмный текст */
+    background: linear-gradient(145deg, #0aecd5, #0a7ef5); /* Градиент */
     padding: 16px 38px;
     border-radius: 4px;
     border: none;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .header_button1:hover {
-    background-color: #434190;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(10, 236, 213, 0.3);
 }
 
 .header_button2 {
-    color: #333;
-    background-color: white;
+    color: #e6f1ff; /* Светлый текст */
+    background-color: transparent;
     padding: 16px 42px;
     border-radius: 4px;
-    border: 1px solid #eee;
+    border: 1px solid #64ffda; /* Бирюзовая обводка */
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .header_button2:hover {
-    background-color: #f5f5f5;
+    background-color: rgba(100, 255, 218, 0.1);
 }
 
 @media (max-width: 768px) {
@@ -84,19 +98,8 @@
         font-size: 24px;
         cursor: pointer;
         padding: 0 20px;
+        color: #e6f1ff; /* Светлый текст */
     }
-}
-
-.navLink {
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 16px 10px;
-  transition: color 0.3s;
-}
-
-.navLink:hover {
-  color: #3D1EDD;
 }
 
 .mobileMenu {
@@ -106,13 +109,14 @@
     width: 80%;
     max-width: 300px;
     height: 100%;
-    background-color: white;
+    background-color: #0a192f; /* Тёмный фон */
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
     z-index: 2000;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     padding: 20px;
     overflow-y: auto;
+    border-left: 1px solid #233554; /* Граница */
 }
 
 .mobileMenu.open {
@@ -125,7 +129,20 @@
     align-items: center;
     margin-bottom: 30px;
     padding-bottom: 15px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #233554; /* Граница */
+}
+
+.mobileMenuHeader h3 {
+    color: #64ffda; /* Акцентный цвет */
+    margin: 0;
+}
+
+.mobileMenuHeader button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #e6f1ff; /* Светлый текст */
 }
 
 .mobileMenuContent {
@@ -137,7 +154,7 @@
 .mobileMenuLink {
     display: block;
     padding: 12px 10px;
-    color: #333;
+    color: #e6f1ff; /* Светлый текст */
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
@@ -146,8 +163,8 @@
 }
 
 .mobileMenuLink:hover {
-    background-color: #f5f5f5;
-    color: #3D1EDD;
+    background-color: rgba(100, 255, 218, 0.1);
+    color: #64ffda; /* Акцентный цвет */
 }
 
 .mobileMenuButton {
@@ -159,26 +176,27 @@
     font-weight: bold;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
 }
 
 .mobileMenuButton1 {
-    background-color: #3D1EDD;
-    color: white;
+    background: linear-gradient(145deg, #0aecd5, #0a7ef5); /* Градиент */
+    color: #0a192f; /* Тёмный текст */
 }
 
 .mobileMenuButton1:hover {
-    background-color: #434190;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(10, 236, 213, 0.3);
 }
 
 .mobileMenuButton2 {
-    background-color: white;
-    color: #333;
-    border: 1px solid #eee;
+    background-color: transparent;
+    color: #e6f1ff; /* Светлый текст */
+    border: 1px solid #64ffda; /* Бирюзовая обводка */
 }
 
 .mobileMenuButton2:hover {
-    background-color: #f5f5f5;
+    background-color: rgba(100, 255, 218, 0.1);
 }
 
 .menuBackdrop {

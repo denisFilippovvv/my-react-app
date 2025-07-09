@@ -25,7 +25,7 @@ const Header = () => {
     <header className={styles.page_header}>
       <nav>
         <Link to="/" className={styles.logo} onClick={() => setIsMobileMenuOpen(false)}>
-          Jobly
+          HackFlow
         </Link>
         
         {isMobile ? (
@@ -38,19 +38,19 @@ const Header = () => {
           </button>
         ) : (
           <div className={styles.header_nav}>
-            <ul><Link to="/cards" className={styles.navLink}>All Cards</Link></ul>
+            <ul><Link to="/cards" className={styles.navLink}>Все карточки</Link></ul>
             <ul>
               <Link to="/for-recruiters" className={styles.navLink}>
-                For Recruiters
+                Для спонсоров
               </Link>
             </ul>
-            <ul><button className={styles.header_button1}>Sign Up</button></ul>
+            <ul><button className={styles.header_button1}>Регистрация</button></ul>
             <ul>
               <button 
                 className={styles.header_button2}
                 onClick={() => setIsModalOpen(true)}
               >
-                Log In
+                Войти
               </button>
             </ul>
           </div>
@@ -81,7 +81,7 @@ const Header = () => {
             className={styles.mobileMenuLink}
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            All Cards
+            Все карточки
           </Link>
           
           <Link 
@@ -89,13 +89,13 @@ const Header = () => {
             className={styles.mobileMenuLink}
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            For Recruiters
+            Для спонсоров
           </Link>
           
           <button 
             className={`${styles.mobileMenuButton} ${styles.mobileMenuButton1}`}
           >
-            Sign Up
+            Регистрация
           </button>
           
           <button 
@@ -105,7 +105,7 @@ const Header = () => {
               setIsModalOpen(true);
             }}
           >
-            Log In
+            Войти
           </button>
         </div>
       </div>

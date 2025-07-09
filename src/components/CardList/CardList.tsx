@@ -25,20 +25,20 @@ interface CardListProps {
 const DEFAULT_CARDS: CardData[] = [
   {
     id: 1,
-    title: "Professional Profile",
-    body: "We know finding the right job is stressful, so we've made it simple. It only takes a few minutes. Create a free portfolio on briefolio to show your best self and get discovered by recruiter",
+    title: "Создай профиль участника",
+    body: "Расскажи о себе: укажи навыки, опыт, проекты. Алгоритмы помогут подобрать тебе лучших тиммейтов и подходящие вызовы.",
     image: profilImg
   },
   {
     id: 2,
-    title: "Best Portfolio",
-    body: "We know finding the right job is stressful, so we've made it simple. It only takes a few minutes. Create a free portfolio on briefolio to show your best self and get discovered by recruiter",
+    title: "Становись частью команды",
+    body: "Найди команду или собери свою. Работай с дизайнерами, девелоперами и аналитиками. Твой проект может изменить индустрию.",
     image: portfolioImg
   },
   {
     id: 3,
-    title: "Powerful Resume",
-    body: "We know finding the right job is stressful, so we've made it simple. It only takes a few minutes. Create a free portfolio on briefolio to show your best self and get discovered by recruiter",
+    title: "Выбирай хакатоны и ивенты",
+    body: "Находи актуальные онлайн и офлайн-хакатоны. Подбирай по интересам: AI, финтех, экология, геймдев и др.",
     image: resumeImg
   }
 ];

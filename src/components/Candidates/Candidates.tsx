@@ -6,13 +6,13 @@ const Candidates = () => {
   return (
     <section className={styles.Candidates}>
       <div className={styles.Candidates_content}>
-        <h1>Candidates with Creative</h1>
-        <h1>& Engineering Backgrounds</h1>
-        <p>This is the place to show yourself and land entry level jobs at cutting-edge companies. Launch your career here.</p>
+        <h1>Собери команду. Решай вызовы</h1>
+        <h1>& Расти с каждым хакатоном</h1>  
+        <p>Участвуй в хакатонах по программированию, дизайну и стартап-проектам. Прокачай портфолио, найди команду и прокладывай карьеру в цифровом мире.</p>
         <Link to="/join-now" className={styles.can}>
-          Join Now
+          Присоединиться
         </Link>
-        <div className={styles.minitext}><p>Looking for candidate's? Hire now</p></div>
+        <div className={styles.minitext}><p>Уже организуете хакатон? Добавить мероприятие</p></div>
         <div className={styles.gradient}>
           <img
             src={img1}
